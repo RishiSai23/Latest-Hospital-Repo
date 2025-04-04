@@ -1,0 +1,158 @@
+/* Google-style login page with animations */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Centered login container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Login box styling */
+.login-box {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Google logo */
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Title and subtitle */
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+p {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Input fields container */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+/* Floating label effect */
+label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    font-size: 16px;
+    color: #888;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+/* Floating label animation */
+input:focus + label,
+input:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #1a73e8;
+    background: white;
+    padding: 0 5px;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+}
+
+/* Forgot email/password links */
+.forgot-email, .forgot-password {
+    font-size: 14px;
+    color: #1a73e8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.forgot-email:hover, .forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Create account link */
+.create-account {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.create-account:hover {
+    text-decoration: underline;
+}
+
+/* Next button */
+.next-btn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.next-btn:hover {
+    background-color: #1558b0;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
